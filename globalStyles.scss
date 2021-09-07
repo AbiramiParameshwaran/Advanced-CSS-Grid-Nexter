@@ -1,0 +1,107 @@
+$medium: 56.25em;
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%; // 1rem=10px
+
+    @media only screen and (max-width: $medium) {
+        font-size: 50%;  //8px
+    }
+}
+
+body {
+    font-family:'Gill Sans', 'Gill Sans MT', sans-serif;
+    font-weight: 300;
+    color: var( --color-gray-light-2);
+    line-height: 1.6;
+}
+
+:root {
+    --color-primary: #c69963;
+    --color-primary-rgb: 198,153,99; 
+    // The rgba() function doesnot accept var() function with Hex values so rgb format required.
+    --color-primary-dark: #B28451;
+
+    --color-secondary: #101d2c;
+    --color-secondary-rgb: 16,29,44;
+
+    --color-gray-light-1: #f9f7f6;
+    --color-gray-light-2: #aaa;
+
+    --color-gray-dark-1: #54483A;
+    --color-gray-dark-2: #6D5D4B;
+}
+
+.primary-button {
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 1.8rem 3rem;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.header1 {
+    font-style: italic;
+    font-size: 3rem;
+    line-height: 1.2;
+}
+
+
+.header2 {
+    font-size: 4rem;
+    line-height: 1;
+    font-style: italic;
+    
+    &--light {
+        color: var( --color-gray-light-1);
+    }
+    &--dark {
+        color: var(--color-gray-dark-1);
+    }
+}
+
+.header3 {
+    font-size: 1.6rem;
+    color: var(--color-primary);
+    text-transform: uppercase;
+}
+
+.header4 {
+    font-size: 1.6rem;
+    
+    &--light {
+        color: var( --color-gray-light-1);
+    }
+    &--dark {
+        color: var(--color-gray-dark-1);
+    }
+}
+
+.mb-sm {
+    margin-bottom: 2rem;
+}
+
+.mb-md {
+    margin-bottom: 4rem;
+}
+
+.mb-lg {
+    margin-bottom: 6rem;
+}
+
+.mb-xl {
+    margin-bottom: 8rem;
+}
